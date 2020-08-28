@@ -21,7 +21,7 @@ class LinearRegressionModel:
 
     # Uses Mean Squared Error
     def loss(self, x, y):
-        return torch.mean(torch.square(self.f(x.double()) - y.double()))
+        return torch.nn.functional.mse_loss(self.f(x.double()), y.double())
 
 if __name__ == '__main__':
     model = LinearRegressionModel()
@@ -39,8 +39,8 @@ if __name__ == '__main__':
 
     # Visualize result
     plt.plot(x_train, y_train, 'o', label='$(\\hat x^{(i)},\\hat y^{(i)})$')
-    plt.xlabel('x')
-    plt.ylabel('y')
+    plt.xlabel('length')
+    plt.ylabel('weight')
     x = torch.tensor([[torch.min(x_train)], [torch.max(x_train)]])  # x = [[1], [6]]]
     plt.plot(x, model.f(x).detach(), label='$y = f(x) = xW+b$')
     plt.legend()
