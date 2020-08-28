@@ -2,9 +2,12 @@ import torch
 import matplotlib.pyplot as plt
 import pandas as pd
 
+learning_rate = 0.0001
+epochs = 200000
+
 file = pd.read_csv("datasets/length_weight.csv")
 x_train = torch.tensor(file.length).reshape(-1, 1)
-y_train = torch.tensor(file.weight.reshape(-1, 1)
+y_train = torch.tensor(file.weight).reshape(-1, 1)
 
 class LinearRegressionModel:
     def __init__(self):
@@ -14,18 +17,18 @@ class LinearRegressionModel:
 
     # Predictor
     def f(self, x):
-        return x @ self.W + self.b
+        return x @ self.W.double() + self.b.double()
 
     # Uses Mean Squared Error
     def loss(self, x, y):
-        return torch.mean(torch.square(self.f(x) - y))
+        return torch.mean(torch.square(self.f(x.double()) - y.double()))
 
 if __name__ == '__main__':
     model = LinearRegressionModel()
 
     # Optimize: adjust W and b to minimize loss using stochastic gradient descent
-    optimizer = torch.optim.SGD([model.W, model.b], 0.01)
-    for epoch in range(1000):
+    optimizer = torch.optim.SGD([model.W, model.b], learning_rate)
+    for epoch in range(epochs):
         model.loss(x_train, y_train).backward()  # Compute loss gradients
         optimizer.step()  # Perform optimization by adjusting W and b
 
