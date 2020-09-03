@@ -8,7 +8,8 @@ learning_rate = 0.0001
 epochs = 200000
 
 file = pd.read_csv("datasets/day_length_weight.csv")
-x_train = torch.tensor([file.length, file.weight]).reshape(-1, 2)
+x_train = torch.tensor([file.length, file.weight]).double().reshape(-1, 2)
+print(x_train)
 y_train = torch.tensor(file.day).reshape(-1, 1)
 
 class LinearRegressionModel:
@@ -19,11 +20,11 @@ class LinearRegressionModel:
 
     #Predicator
     def f(self, x):
-        return x @ self.W.double() + self.b.double()
+        return x @ self.W + self.b
 
     # Uses Mean Squered Error
     def loss(self, x, y):
-        return torch.nn.functional.mse_loss(self.f(x.double()), y.double())
+        return torch.nn.functional.mse_loss(self.f(x), y)
 
 if __name__ == '__main__':
     model = LinearRegressionModel()
