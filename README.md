@@ -10,8 +10,6 @@ Linear 3d recursion of dataset using length and weight values corresponding to d
 Non linear 2d recursion of a dataset of the head circumference of newborn babies by day, using the following predicator: f(x) = 20σ(xW + b) + 31, where σ is the sigmoid function.
 ## [Exercise 2 - Artificial Neural Networks](/Øving-2)
 ### [Task A](/Øving-2/task-a.py)
-Linear 2d recursion of a dataset containing length to width values.
 ### [Task B](/Øving-2/task-b.py)
-Linear 3d recursion of dataset using length and weight values corresponding to different days.
 ### [Task C](/Øving-2/task-c.py)
 ### [Task D](/Øving-2/task-d.py)
