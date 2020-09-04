@@ -5,14 +5,14 @@ import numpy as np
 learning_rate = 0.1
 epochs = 10000
 
-x_train = torch.tensor([[1.],[0.]])
-y_train = torch.tensor([[0.],[1.]])
+x_train = torch.tensor([[1.0],[0.0]])
+y_train = torch.tensor([[0.0],[1.0]])
 
 class SigmoidModel:
     def __init__(self):
         #Model variables
-        self.W = torch.tensor([[0.]], requires_grad=True)
-        self.b = torch.tensor([[0.]], requires_grad=True)
+        self.W = torch.tensor([[0.0]], requires_grad=True)
+        self.b = torch.tensor([[0.0]], requires_grad=True)
 
     def logits(self, x):
         return x @ self.W + self.b
