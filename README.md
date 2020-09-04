@@ -17,3 +17,4 @@ Visualization of the NAND operator in 3d space.
 ### [Task C](/Øving-2/task-c.py)
 Visualization of the XOR operator in 3d space, with both non converging starting values, as well as functioning values.
 ### [Task D](/Øving-2/task-d.py)
+Training and testing on the MNIST dataset, with an accuracy guarantee of at least 90%, generating images visualizing the optimized model. 
