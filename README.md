@@ -9,7 +9,11 @@ Linear 3d recursion of dataset using length and weight values corresponding to d
 ### [Task C](/Øving-1/task-c.py)
 Non linear 2d recursion of a dataset of the head circumference of newborn babies by day, using the following predicator: f(x) = 20σ(xW + b) + 31, where σ is the sigmoid function.
 ## [Exercise 2 - Artificial Neural Networks](/Øving-2)
+Exercise in neural networks, where task a-c visualizes different operators, and task d classifies had written numbers, trained on the MNIST dataset.
 ### [Task A](/Øving-2/task-a.py)
+Visualization of the NOT operator as a 2d graph.
 ### [Task B](/Øving-2/task-b.py)
+Visualization of the NAND operator in 3d space.
 ### [Task C](/Øving-2/task-c.py)
+Visualization of the XOR operator in 3d space, with both non converging starting values, as well as functioning values. 
 ### [Task D](/Øving-2/task-d.py)
