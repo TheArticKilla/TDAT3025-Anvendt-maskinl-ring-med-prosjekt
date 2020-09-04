@@ -52,4 +52,4 @@ if __name__ == '__main__':
     print("W = %s, b = %s, loss = %s, accuracy = %s, epochs = %s" % (model.W, model.b, model.loss(x_test, y_test), model.accuracy(x_test, y_test), epochs))
 
     for i in range(10):
-        plt.imsave('image-%s.png' % i, model.W[:, i].reshape(28, 28).detach())
+        plt.imsave('images/task-d-images/image-%s.png' % i, model.W[:, i].reshape(28, 28).detach())
