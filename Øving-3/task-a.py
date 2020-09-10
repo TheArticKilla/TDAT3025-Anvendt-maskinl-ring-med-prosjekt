@@ -12,15 +12,16 @@ class ConvolutionalNeuralNetworkModel(nn.Module):
         super(ConvolutionalNeuralNetworkModel, self).__init__()
 
         # Model layers (includes initialized model variables):
-        self.logits = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(32 * 14 * 14, 10)).to(device)
+        self.logits1 = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(32 * 14 * 14, 10)).to(device)
+        self.logits2 = nn.Sequential(nn.Conv2d(1, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10)).to(device)
 
     # Predictor
     def f(self, x):
-        return torch.softmax(self.logits(x), dim=1)
+        return torch.softmax(self.logits2(self.logits1(x)), dim=1)
 
     # Cross Entropy loss
     def loss(self, x, y):
-        return nn.functional.cross_entropy(self.logits(x), y.argmax(1))
+        return nn.functional.cross_entropy(self.logits2(self.logits1(x)), y.argmax(1))
 
     # Accuracy
     def accuracy(self, x, y):
