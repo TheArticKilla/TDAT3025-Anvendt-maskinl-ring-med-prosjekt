@@ -17,4 +17,14 @@ Visualization of the NAND operator in 3d space.
 ### [Task C](/Øving-2/task-c.py)
 Visualization of the XOR operator in 3d space, with both non converging starting values, as well as functioning values.
 ### [Task D](/Øving-2/task-d.py)
-Training and testing on the MNIST dataset, with an accuracy guarantee of at least 90%, generating images visualizing the optimized model. 
+Training and testing on the MNIST dataset, with an accuracy guarantee of at least 90%, generating images visualizing the optimized model.
+## [Exercise 3 - Convolutional Neural Networks](/Øving-3)
+An exercise utilizing convolutional neural networks, with tasks a-c gradually expands a convoluted neural network on the MNIST dataset, and task d uses the same techniques on the Fashion MNIST set.
+### [Task A](/Øving-3/task-a.py)
+Expands an 1 layer deep convoluted neural network, into a 2 layer deep network. Achieving a ??% accuracy.
+### [Task B](/Øving-3/task-b.py)
+Adds an extra dense layer to the previous model. Now achieving ??% accuracy.
+### [Task C](/Øving-3/task-c.py)
+Further expands the model form a and b, by adding a ReLU?/Dropout? layer. Further increasing the accuracy to ??%.
+### [Task D](/Øving-3/task-d.py)
+This time, we use a convoluted neaural network on the Fashion MNIST dataset, instead of the standard MNIST set. This model achieves an accuracy of ??%
