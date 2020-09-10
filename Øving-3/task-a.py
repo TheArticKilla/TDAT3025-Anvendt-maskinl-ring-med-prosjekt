@@ -6,14 +6,15 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 learning_rate = 0.001
 epochs = 20
+batches = 1200
 
 class ConvolutionalNeuralNetworkModel(nn.Module):
     def __init__(self):
         super(ConvolutionalNeuralNetworkModel, self).__init__()
 
         # Model layers (includes initialized model variables):
-        self.logits1 = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(32 * 14 * 14, 10)).to(device)
-        self.logits2 = nn.Sequential(nn.Conv2d(1, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10)).to(device)
+        self.logits1 = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
+        self.logits2 = nn.Sequential(nn.Conv2d(32, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10)).to(device)
 
     # Predictor
     def f(self, x):
@@ -46,7 +47,6 @@ if __name__ == '__main__':
     x_test = (x_test - mean) / std
 
     # Divide training data into batches to speed up optimization
-    batches = 600
     x_train_batches = torch.split(x_train, batches)
     y_train_batches = torch.split(y_train, batches)
 
