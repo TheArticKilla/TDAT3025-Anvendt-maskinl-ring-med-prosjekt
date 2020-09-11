@@ -14,8 +14,8 @@ class ConvolutionalNeuralNetworkModel(nn.Module):
 
         # Model layers (includes initialized model variables):
         self.logits1 = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
-        self.logits2 = nn.Sequential(nn.Conv2d(32, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
-        self.logits3 = nn.Sequential(nn.Dropout()).to(device)
+        self.logits2 = nn.Sequential(nn.Dropout()).to(device)
+        self.logits3 = nn.Sequential(nn.Conv2d(32, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
         self.logits4 = nn.Sequential(nn.Flatten(), nn.Linear(64 * 7 * 7, 1024), nn.Linear(1024, 10)).to(device)
 
     # Predictor
