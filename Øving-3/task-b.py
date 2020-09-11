@@ -6,7 +6,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 learning_rate = 0.001
 epochs = 20
-batches = 1200
+batches = 200
 
 class ConvolutionalNeuralNetworkModel(nn.Module):
     def __init__(self):
@@ -14,15 +14,16 @@ class ConvolutionalNeuralNetworkModel(nn.Module):
 
         # Model layers (includes initialized model variables):
         self.logits1 = nn.Sequential(nn.Conv2d(1, 32, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
-        self.logits2 = nn.Sequential(nn.Conv2d(32, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2), nn.Flatten(), nn.Linear(64 * 7 * 7, 10)).to(device)
+        self.logits2 = nn.Sequential(nn.Conv2d(32, 64, kernel_size=5, padding=2), nn.MaxPool2d(kernel_size=2)).to(device)
+        self.logits3 = nn.Sequential(nn.Flatten(), nn.Linear(64 * 7 * 7, 1024), nn.Linear(1024, 10)).to(device)
 
     # Predictor
     def f(self, x):
-        return torch.softmax(self.logits2(self.logits1(x)), dim=1)
+        return torch.softmax(self.logits3(self.logits2(self.logits1(x))), dim=1)
 
     # Cross Entropy loss
     def loss(self, x, y):
-        return nn.functional.cross_entropy(self.logits2(self.logits1(x)), y.argmax(1))
+        return nn.functional.cross_entropy(self.logits3(self.logits2(self.logits1(x))), y.argmax(1))
 
     # Accuracy
     def accuracy(self, x, y):
