@@ -23,7 +23,7 @@ An exercise utilizing convolutional neural networks, with tasks a-c gradually ex
 ### [Task A](/Øving-3/task-a.py)
 Expands an 1 layer deep convoluted neural network, into a 2 layer deep network. Achieving a 98.7% accuracy.
 ### [Task B](/Øving-3/task-b.py)
-Adds an extra dense layer to the previous model. Now achieving ??% accuracy.
+Adds an extra dense layer to the previous model. Now achieving 98.0% accuracy.
 ### [Task C](/Øving-3/task-c.py)
 Further expands the model form a and b, by adding a ReLU?/Dropout? layer. Further increasing the accuracy to ??%.
 ### [Task D](/Øving-3/task-d.py)
