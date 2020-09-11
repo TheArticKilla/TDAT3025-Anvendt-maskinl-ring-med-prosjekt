@@ -21,7 +21,7 @@ Training and testing on the MNIST dataset, with an accuracy guarantee of at leas
 ## [Exercise 3 - Convolutional Neural Networks](/Øving-3)
 An exercise utilizing convolutional neural networks, with tasks a-c gradually expands a convoluted neural network on the MNIST dataset, and task d uses the same techniques on the Fashion MNIST set. All tasks are made to be able to utilize CUDA cores.
 ### [Task A](/Øving-3/task-a.py)
-Expands an 1 layer deep convoluted neural network, into a 2 layer deep network. Achieving a ??% accuracy.
+Expands an 1 layer deep convoluted neural network, into a 2 layer deep network. Achieving a 98.7% accuracy.
 ### [Task B](/Øving-3/task-b.py)
 Adds an extra dense layer to the previous model. Now achieving ??% accuracy.
 ### [Task C](/Øving-3/task-c.py)
