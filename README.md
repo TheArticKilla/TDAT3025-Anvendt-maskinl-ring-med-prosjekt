@@ -28,3 +28,9 @@ Adds an extra dense layer to the previous model. Now achieving 98.0% accuracy.
 Further expands the model form a and b, by adding a Dropout layer. Now achieving an accuracy of 98.0%.
 ### [Task D](/Øving-3/task-d.py)
 This time, we use a convoluted neaural network on the Fashion MNIST dataset, instead of the standard MNIST set. This model achieves an accuracy of 88.0%
+## [Exercise 4 - Recurrent Neural Networks](/Øving-4)
+Exercise in recurrent neural networks, training a recurrent network model on learning to generate and recognize words.
+### [Task A](/Øving-4/task-a.py)
+Task A trains a model to generate the sentence: "hello world".
+### [Task B](/Øving-4/task-b.py)
+Task B trains the same model to recognize different words representing emojis. 
