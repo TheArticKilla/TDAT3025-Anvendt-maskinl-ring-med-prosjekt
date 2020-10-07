@@ -37,3 +37,5 @@ Task B trains the same model to recognize different words representing emojis.
 ## [Exercise 5 - Jupyter Notebook, Pandas and feature extraction](/Øving-5)
 Exercise in which we use Jupyter Notebook and Pandas to analyze and extract features from [a dataset containing
 data about mushrooms](https://archive.ics.uci.edu/ml/datasets/Mushroom)
+## [Exercise 6 - Dimension Reduction in Jupyter](Øving-6)
+This exercise looks at the reduction of dimensions in [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom), to select the most prevalent features. 
