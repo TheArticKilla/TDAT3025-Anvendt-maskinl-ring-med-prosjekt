@@ -38,4 +38,6 @@ Task B trains the same model to recognize different words representing emojis.
 Exercise in which we use Jupyter Notebook and Pandas to analyze and extract features from [a dataset containing
 data about mushrooms](https://archive.ics.uci.edu/ml/datasets/Mushroom)
 ## [Exercise 6 - Dimension Reduction in Jupyter](Øving-6)
-This exercise looks at the reduction of dimensions in [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom), to select the most prevalent features. 
+This exercise looks at the reduction of dimensions in [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom), to select the most prevalent features.
+## [Exercise 7 - Unsupervised Learning with Clustering in Jupyter](Øving-7)
+Using unsupervised learning to cluster [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom) using K-means and Silhouette metric scoring.
