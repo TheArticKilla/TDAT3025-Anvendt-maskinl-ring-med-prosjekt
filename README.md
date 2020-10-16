@@ -41,3 +41,9 @@ data about mushrooms](https://archive.ics.uci.edu/ml/datasets/Mushroom)
 This exercise looks at the reduction of dimensions in [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom), to select the most prevalent features.
 ## [Exercise 7 - Unsupervised Learning with Clustering in Jupyter](Øving-7)
 Using unsupervised learning to cluster [a dataset](https://archive.ics.uci.edu/ml/datasets/Mushroom) using K-means and Silhouette metric scoring.
+## [Execise 8 - Reinforcement Learning](Øving-8)
+Reinforcement learning algorithms on the [Gym CartPole environment][https://gym.openai.com/envs/CartPole-v1/].
+### [Task 1](Øving-8/task-1.py)
+First task in creating a simple Q-learing algorithm to solve the [CartPole environment](https://gym.openai.com/envs/CartPole-v1/)
+### [Task 2B](Øving-8/task-2b.py)
+Expands the solution from task 1 to use a DQN to solve the CartPole instead.
